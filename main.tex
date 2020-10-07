@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{reasoning_simulation_underwater_scene}
+\title{Reasoning simulation underwaters scene}
 \author{mauhing.yip }
 \date{October 2020}
 
@@ -12,20 +12,33 @@
 
 \maketitle
 
-\section{Introduction}
-There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
-There is another theory which states that this has already happened.
+\section{Brief Intro}
+This document will explain the motivation of using "Blender" to simulate the underwater scene.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=1.7]{universe}
-\caption{The Universe}
-\label{fig:universe}
-\end{figure}
+\section{Motivation}
+For us to build various computer vision algorithm for underwater scene, it will necessary to have an videos or samples to validate the algorithm. However, such videos or samples is very expansive to obtain and it usually does not demonstrate all kind of underwater scenario. In this case, it would be reasonable to build a simulator to simulate underwater visual scene. Here, we can only care about the visual scene and not the fluid dynamic or ocean modelling. The goal to get an realistic enough image as an camera and light source in underwater with various possible scene. We start from the open source software: Blender to simulate the scene.
 
-\section{Conclusion}
-``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
 
-\bibliographystyle{plain}
-\bibliography{references}
+\section{Stage 1: Seafloor and haze}
+\begin{itemize}
+    \item Setting up the sea floor with sandy mud. Some up and down topology can also be included.
+    \item Various common object like bottle cane, sea grass.
+    \item Introduce scattering/haze effect.
+\end{itemize}
+The goal in this stage is to create a good enough realistic scene as possible with static effect
+
+\section{Stage 2: Dynamic effect: Moving particle etc}
+\begin{itemize}
+    \item Introduce some moving particles. It could be Brownian motion.
+\end{itemize}
+
+\section{Stage 3: Rendering server and python console}
+\begin{itemize}
+    \item Can the Blander be rendering server for python?
+    \item Any way that Blender can communicate with python?
+\end{itemize}
+
+
+%\bibliographystyle{plain}
+%\bibliography{references}
 \end{document}
